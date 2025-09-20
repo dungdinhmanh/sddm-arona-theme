@@ -1,12 +1,10 @@
-# sddm-astronaut-theme
+# sddm-arona-theme
 
-![Stars](https://img.shields.io/github/stars/keyitdev/sddm-astronaut-theme?color=dd864a&labelColor=1b1b25&style=for-the-badge)
-![Forks](https://img.shields.io/github/forks/keyitdev/sddm-astronaut-theme?color=bf616a&labelColor=1b1b25&style=for-the-badge)
 [![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/keyitdev)
 
-[sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) is a series of themes for the [SDDM](https://github.com/sddm/sddm/) display manager made by **[Keyitdev](https://github.com/Keyitdev)**.
+[sddm-arona-theme](https://github.com/dungdinhmanh/sddm-arona-theme) is a fork of the [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) [SDDM](https://github.com/sddm/sddm/) display manager made by **[Keyitdev](https://github.com/Keyitdev)**.
 
-It's written using the latest version of Qt, which is **Qt6**. Its key features include **virtual keyboard support** and an **installation script**. This theme also support **animated wallpapers**. You can easily change its appearance by choosing another of the ten pre-made themes or creating your own. Each of these themes was created by modifying just one file - **[config](./Themes/astronaut.conf)**.
+It's written using the latest version of Qt, which is **Qt6**. Its key features include **virtual keyboard support** and an **installation script**. This theme also support **animated wallpapers**. You can easily change its appearance by choosing another of the ten pre-made themes or creating your own. Each of these themes was created by modifying just one file - **[config](./Themes/arona_live.conf)**.
 
 All themes were created for 1080p. However, they should work well in other resolutions.
 
@@ -18,40 +16,12 @@ All themes were created for 1080p. However, they should work well in other resol
 
 https://github.com/user-attachments/assets/2cfc947e-4621-4e98-b5f3-07d5e224b80c
 
-<!-- <h2><a href="https://youtu.be/4tQ56xh7wBc" target="_blank">Watch more on Youtube!</a></h2> -->
-<details>
-<summary><h2>Detailed previews</h2></summary>
-
-**Astronaut**|**Black hole**
-|:--:|:--:|
-![astronaut](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/astronaut.png?raw=true)|![black_hole](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/black_hole.png?raw=true)
-**Japanese aesthetic**|**Pixel sakura static**
-![japanese_aesthetic](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/japanese_aesthetic.png?raw=true)|![pixel_sakura_static](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/pixel_sakura_static.png?raw=true)
-**Purple leaves**|**Cyberpunk**
-![purple_leaves](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/purple_leaves.png?raw=true)|![cyberpunk](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/cyberpunk.png?raw=true)
-**Post-apocalyptic hacker**|**xxx**
-![post-apocalyptic_hacker](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/post-apocalyptic_hacker.png?raw=true)|
-
-**Hyprland Kath**
-
-https://github.com/user-attachments/assets/1d926e76-44f7-4d99-ac6d-d1abcd7ed688
-
-**Pixel sakura**
-
-https://github.com/user-attachments/assets/ea004765-7e84-4a0d-90cd-aaac97679f62
-
-**Jake the dog**
-
-https://github.com/user-attachments/assets/181d48c2-f152-45f5-b568-21145be180f6
-
-</details>
-
 ## Installation
 
 ### Automatic Installation
 
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/keyitdev/sddm-astronaut-theme/master/setup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/dungdinhmanh/sddm-arona-theme/master/setup.sh)"
 ```
 > Works on distributions using pacman, xbps-install, dnf, zypper.   
 > Remember to always read the scripts you run from the internet.
@@ -74,16 +44,17 @@ sddm libqt6svg6 qt6-svg-plugins qt6-virtualkeyboard-plugin libqt6multimedia6 qml
 
 2. Clone this repository
 ```sh
-sudo git clone -b master --depth 1 https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
+sudo git clone -b master --depth 1 https://github.com/dungdinhmanh/sddm-arona-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
 ```
 3. Copy fonts to `/usr/share/fonts/`
 ```sh
-sudo cp -r /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
+sudo cp -r /usr/share/sddm/themes/sddm-arona-theme/Fonts/* /usr/share/fonts/
+sudo mkdir /etc/sddm.conf.d #If not exist
 ```
-4. Edit `/etc/sddm.conf`
+4. Edit `/etc/sddm.conf` and `/etc/sddm.conf.d/kde_settings.conf` (If u using debian/not exist this file)
 ```sh
 echo "[Theme]
-Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
+Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf /etc/sddm.conf.d/kde_settings.conf
 ```
 5. Edit `/etc/sddm.conf.d/virtualkbd.conf`
 ```sh
@@ -93,11 +64,11 @@ InputMethod=qtvirtualkeyboard" | sudo tee /etc/sddm.conf.d/virtualkbd.conf
 
 ## Selecting a theme
 
-You can select theme by editing [metadata](./metadata.desktop) (`/usr/share/sddm/themes/sddm-astronaut-theme/metadata.desktop`).
+You can select theme by editing [metadata](./metadata.desktop) (`/usr/share/sddm/themes/sddm-arona-theme/metadata.desktop`).
 
 Just edit this line:
 ```
-ConfigFile=Themes/astronaut.conf
+ConfigFile=Themes/arona_live.conf
 ```
 All available configs are in [Themes](./Themes/) directory.
 
@@ -105,33 +76,21 @@ All available configs are in [Themes](./Themes/) directory.
 
 You can preview the set theme without logging out by runnning:
 ```sh
-sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme/
+sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-arona-theme/
 ```
 > Note that depending on the system configuration, the preview may differ slightly from the actual login screen.
 
 ## Sources
 
-Initially the theme was independed fork of [MarianArlt's theme](https://github.com/MarianArlt/sddm-sugar-dark) but now the project has come a long way and started to significantly deviate from the original.
-Many of the wallpapers and fonts used in this project are very popular and copied from one user to another, so I don't know who the original creator is. 
-I also redesigned many of them, but here are links to some of the orginal artists who created these wonderful wallpapers:
+This theme is edited base on [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) by [Keyitdev](https://github.com/Keyitdev)
 
-- Astronaut: [wallpaper](https://wallhaven.cc/w/e76pew), [font](https://fonts.google.com/specimen/Open+Sans/about)
-- Black hole: [wallpaper](https://images2.alphacoders.com/114/1141632.jpg), [font](https://www.1001fonts.com/espacion-font.html)
-- Japanese aesthetic: [wallpaper](https://imgur.com/a/pua0dYx) by [gharly](https://www.artstation.com/gharly), [font](https://www.1001fonts.com/electroharmonix-font.html)
-- Purple leaves: [wallpaper](https://wallha.com/wallpaper/artwork-abstract-leaves-purple-texture-pattern-1414432), [font](https://fonts.google.com/specimen/Open+Sans/about)
-- Cyberpunk: [wallpaper](https://images5.alphacoders.com/133/1330479.png) by [patrika](https://alphacoders.com/users/profile/227699/patrika), [font](https://www.1001fonts.com/kognigear-font.html)
-- Post-apocalyptic hacker:  [wallpaper](https://images.alphacoders.com/137/thumb-1920-1375178.png) by [patrika](https://alphacoders.com/users/profile/227699/patrika), [font](https://www.1001fonts.com/fragile-bombers-font.html)
-- Hyprland Kath: [wallpaper](https://motionbgs.com/andvari-last-origin), [font](https://www.1001fonts.com/pixelon-font.html)
-- Pixel sakura: [wallpaper](https://imgur.com/gallery/sakura-tree-with-petals-flying-off-t5tg4N8), [font](https://www.1001fonts.com/arcadeclassic-font.html)
-- Jake the dog: [wallpaper](https://motionbgs.com/jake-the-dog), [font](https://fontmeme.com/fonts/thunderman-font/)
-  
 ## Supporting project
 
-You can support me simply by dropping a **star** on **[github](https://github.com/Keyitdev/sddm-astronaut-theme)** or giving a **subscription** on **[YouTube](http://www.youtube.com/channel/UCVoGVyAP2sHPQyegwBMJKyQ?sub_confirmation=1)**.
+You can support me simply by dropping a **star** on **[github](https://github.com/dungdinhmanh/sddm-arona-theme)**.
 
-If you enjoyed it and would like to show your appreciation, you can make a **[donation](https://ko-fi.com/keyitdev)** using **[kofi](https://ko-fi.com/keyitdev)**.
+If you enjoyed it and would like to show your appreciation, you can make a donation using **[kofi](https://ko-fi.com/keyitdev)**.
 
 [![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/keyitdev)
 
 Distributed under the **[GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html) License**.    
-Copyright (C) 2022-2025 Keyitdev.
+Copyright (C) 2025 dungdinhmanh.
