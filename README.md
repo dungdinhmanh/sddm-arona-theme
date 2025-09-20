@@ -1,6 +1,6 @@
 # sddm-arona-theme
 
-[![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/keyitdev)
+[![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/dungdinhmanh)
 
 [sddm-arona-theme](https://github.com/dungdinhmanh/sddm-arona-theme) is a fork of the [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) [SDDM](https://github.com/sddm/sddm/) display manager made by **[Keyitdev](https://github.com/Keyitdev)**.
 
@@ -88,9 +88,9 @@ This theme is edited base on [sddm-astronaut-theme](https://github.com/Keyitdev/
 
 You can support me simply by dropping a **star** on **[github](https://github.com/dungdinhmanh/sddm-arona-theme)**.
 
-If you enjoyed it and would like to show your appreciation, you can make a donation using **[kofi](https://ko-fi.com/keyitdev)**.
+If you enjoyed it and would like to show your appreciation, you can make a donation using **[kofi](https://ko-fi.com/dungdinhmanh)**.
 
-[![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/keyitdev)
+[![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/dungdinhmanh)
 
 Distributed under the **[GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html) License**.    
 Copyright (C) 2025 dungdinhmanh.
