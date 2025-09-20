@@ -5,6 +5,7 @@
 
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.Effects
 
 Column {
     id: clock
@@ -17,10 +18,18 @@ Column {
 
         anchors.horizontalCenter: parent.horizontalCenter
 
-        font.pointSize: root.font.pointSize * 3
+        font.pointSize: root.font.pointSize * 2.8
         color: config.HeaderTextColor
         renderType: Text.QtRendering
         text: config.HeaderText
+        layer.enabled: true
+        layer.effect: MultiEffect {
+        	shadowEnabled: true
+        	shadowColor: "#20333f"
+        	shadowBlur: 1.0
+        	shadowHorizontalOffset: 0
+        	shadowVerticalOffset: 3
+        }
     }
 
     Label {
@@ -28,13 +37,21 @@ Column {
 
         anchors.horizontalCenter: parent.horizontalCenter
 
-        font.pointSize: root.font.pointSize * 9
+        font.pointSize: root.font.pointSize * 8
         font.bold: true
         color: config.TimeTextColor
         renderType: Text.QtRendering
 
         function updateTime() {
             text = new Date().toLocaleTimeString(Qt.locale(config.Locale), config.HourFormat == "long" ? Locale.LongFormat : config.HourFormat !== "" ? config.HourFormat : Locale.ShortFormat)
+        }
+        layer.enabled: true
+        layer.effect: MultiEffect {
+            shadowEnabled: true
+            shadowColor: "#20333f"
+            shadowBlur: 0.9
+            shadowHorizontalOffset: 0
+            shadowVerticalOffset: 2
         }
     }
 
@@ -44,17 +61,25 @@ Column {
         anchors.horizontalCenter: parent.horizontalCenter
         
         color: config.DateTextColor
-        font.pointSize: root.font.pointSize * 2
+        font.pointSize: root.font.pointSize * 1.5
         font.bold: true
         renderType: Text.QtRendering
 
         function updateTime() {
-            text = new Date().toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat)
+            text = new Date().toLocaleDateString(Qt.locale(config.Locale), config.DateFormat == "short" ? Locale.ShortFormat : config.DateFormat !== "" ? config.DateFormat : Locale.LongFormat)}
+
+		layer.enabled: true
+   		layer.effect: MultiEffect {
+       		shadowEnabled: true
+       		shadowColor: "#20333f"
+       		shadowBlur: 0.9
+       		shadowHorizontalOffset: 0
+       		shadowVerticalOffset: 2
         }
     }
 
     Timer {
-        interval: 1000
+        interval: 500
         repeat: true
         running: true
         onTriggered: {
