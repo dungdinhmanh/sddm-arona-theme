@@ -43,7 +43,7 @@ sddm libqt6svg6 qt6-svg-plugins qt6-virtualkeyboard-plugin libqt6multimedia6 qml
 
 2. Clone this repository
 ```sh
-sudo git clone -b master --depth 1 https://github.com/dungdinhmanh/sddm-arona-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
+sudo git clone -b master --depth 1 https://github.com/dungdinhmanh/sddm-arona-theme.git /usr/share/sddm/themes/sddm-arona-theme
 ```
 3. Copy fonts to `/usr/share/fonts/`
 ```sh
@@ -53,7 +53,7 @@ sudo mkdir /etc/sddm.conf.d #If not exist
 4. Edit `/etc/sddm.conf` and `/etc/sddm.conf.d/kde_settings.conf` (If u using debian/not exist this file)
 ```sh
 echo "[Theme]
-Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf /etc/sddm.conf.d/kde_settings.conf
+Current=sddm-arona-theme" | sudo tee /etc/sddm.conf /etc/sddm.conf.d/kde_settings.conf
 ```
 5. Edit `/etc/sddm.conf.d/virtualkbd.conf`
 ```sh
