@@ -8,9 +8,9 @@ It's written using the latest version of Qt, which is **Qt6**. Its key features 
 
 All themes were created for 1080p. However, they should work well in other resolutions.
 
-## Preview of all themes
+## Preview of static theme
 
-![all_themes.gif](https://github.com/Keyitdev/screenshots/blob/master/sddm-astronaut-theme/master/all_themes.gif?raw=true)
+![arona static](Previews/arona_static.png)
 
 ## Preview of animated themes
 
