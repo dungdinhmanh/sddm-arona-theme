@@ -109,7 +109,7 @@ install_deps() {
         xbps) sudo xbps-install -y sddm qt6-svg qt6-virtualkeyboard qt6-multimedia ;;
         dnf) sudo dnf install -y sddm qt6-qtsvg qt6-qtvirtualkeyboard qt6-qtmultimedia ;;
         zypper) sudo zypper install -y sddm libQt6Svg6 qt6-virtualkeyboard qt6-multimedia ;;
-        apt) sudo apt update && sudo apt install --no-install-recommends sddm && sduo apt install libqt6svg6 qt6-svg-plugins qml6-module-qtquick-virtualkeyboard libqt6multimedia6 qml6-module-qtquick-controls qml6-module-qtquick-effects libxcb-cursor0 ;;
+        apt) sudo apt update && sudo apt install --no-install-recommends sddm && sudo apt install libqt6svg6 qt6-svg-plugins qml6-module-qtquick-virtualkeyboard libqt6multimedia6 qml6-module-qtquick-controls qml6-module-qtquick-effects libxcb-cursor0 ;;
         *) error "Unsupported package manager"; return 1 ;;
     esac
     info "Dependencies installed"
