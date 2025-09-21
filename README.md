@@ -48,7 +48,7 @@ sudo git clone -b master --depth 1 https://github.com/dungdinhmanh/sddm-arona-th
 3. Copy fonts to `/usr/share/fonts/`
 ```sh
 sudo cp -r /usr/share/sddm/themes/sddm-arona-theme/Fonts/* /usr/share/fonts/
-sudo mkdir /etc/sddm.conf.d #If not exist
+sudo mkdir /etc/sddm.conf.d # Create a folder if not exist
 ```
 4. Edit `/etc/sddm.conf` and `/etc/sddm.conf.d/kde_settings.conf` (If u using debian/not exist this file)
 ```sh
