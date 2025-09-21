@@ -2,7 +2,7 @@
 
 [![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/dungdinhmanh)
 
-[sddm-arona-theme](https://github.com/dungdinhmanh/sddm-arona-theme) is a fork of the [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) [SDDM](https://github.com/sddm/sddm/) display manager made by **[Keyitdev](https://github.com/Keyitdev)**.
+[sddm-arona-theme](https://github.com/dungdinhmanh/sddm-arona-theme) is a fork of the [sddm-astronaut-theme](https://github.com/Keyitdev/sddm-astronaut-theme) for [SDDM](https://github.com/sddm/sddm/) display manager made by **[Keyitdev](https://github.com/Keyitdev)**.
 
 It's written using the latest version of Qt, which is **Qt6**. Its key features include **virtual keyboard support** and an **installation script**. This theme also support **animated wallpapers**. You can easily change its appearance by choosing another of the ten pre-made themes or creating your own. Each of these themes was created by modifying just one file - **[config](./Themes/arona_live.conf)**.
 
