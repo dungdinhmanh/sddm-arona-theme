@@ -1,24 +1,22 @@
 #!/bin/bash
 
-## SDDM Astronaut Theme Installer
+## SDDM Arona Theme Installer
 ## Based on original by Keyitdev https://github.com/Keyitdev/sddm-astronaut-theme
-## Copyright (C) 2022-2025 Keyitdev
+## Copyright (C) 2025 dungdinhmanh
 
-# Script works in Arch, Fedora, Ubuntu. Didn't tried in Void and openSUSE
+# Script works in Arch, Fedora, Ubuntu/Debian. Didn't tried in Void and openSUSE
 
 set -euo pipefail
 
-readonly THEME_REPO="https://github.com/Keyitdev/sddm-astronaut-theme.git"
-readonly THEME_NAME="sddm-astronaut-theme"
+readonly THEME_REPO="https://github.com/dungdinhmanh/sddm-arona-theme.git"
+readonly THEME_NAME="sddm-arona-theme"
 readonly THEMES_DIR="/usr/share/sddm/themes"
 readonly PATH_TO_GIT_CLONE="$HOME/$THEME_NAME"
 readonly METADATA="$THEMES_DIR/$THEME_NAME/metadata.desktop"
 readonly DATE=$(date +%s)
 
 readonly -a THEMES=(
-    "astronaut" "black_hole" "cyberpunk" "hyprland_kath" "jake_the_dog"
-    "japanese_aesthetic" "pixel_sakura" "pixel_sakura_static"
-    "post-apocalyptic_hacker" "purple_leaves"
+    "arona_live" "arona_static"
 )
 
 # Logging with gum fallback
@@ -111,7 +109,7 @@ install_deps() {
         xbps) sudo xbps-install -y sddm qt6-svg qt6-virtualkeyboard qt6-multimedia ;;
         dnf) sudo dnf install -y sddm qt6-qtsvg qt6-qtvirtualkeyboard qt6-qtmultimedia ;;
         zypper) sudo zypper install -y sddm libQt6Svg6 qt6-virtualkeyboard qt6-multimedia ;;
-        apt) sudo apt update && sudo apt install -y sddm qt6-svg-dev qml6-module-qtquick-virtualkeyboard qt6-multimedia-dev ;;
+        apt) sudo apt update && sudo apt install --no-install-recommends sddm && sduo apt install libqt6svg6 qt6-svg-plugins qml6-module-qtquick-virtualkeyboard libqt6multimedia6 qml6-module-qtquick-controls qml6-module-qtquick-effects libxcb-cursor0 ;;
         *) error "Unsupported package manager"; return 1 ;;
     esac
     info "Dependencies installed"
@@ -140,10 +138,10 @@ install_theme() {
     [[ -d "$dst/Fonts" ]] && spin "Installing fonts..." sudo cp -r "$dst/Fonts"/* /usr/share/fonts/
 
     # Configure SDDM
-    echo "[Theme]
-    Current=$THEME_NAME" | sudo tee /etc/sddm.conf >/dev/null
-
     sudo mkdir -p /etc/sddm.conf.d
+    echo "[Theme]
+    Current=$THEME_NAME" | sudo tee /etc/sddm.conf /etc/sddm.conf.d/kde_settings.conf >/dev/null
+    
     echo "[General]
     InputMethod=qtvirtualkeyboard" | sudo tee /etc/sddm.conf.d/virtualkbd.conf >/dev/null
 
@@ -172,7 +170,7 @@ enable_sddm() {
 preview_theme(){
     local log_file="/tmp/${THEME_NAME}_$DATE.txt"
     
-    sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-astronaut-theme/ > $log_file 2>&1 &
+    sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/sddm-arona-theme/ > $log_file 2>&1 &
     greeter_pid=$!
 
     # wait for ten seconds
@@ -202,9 +200,9 @@ main() {
     clear
     while true; do
         if command -v gum &>/dev/null; then
-            gum style --bold --padding "0 2" --border double --border-foreground 12 "🚀 SDDM Astronaut Theme Installer"
+            gum style --bold --padding "0 2" --border double --border-foreground 12 "🚀 SDDM Arona Theme Installer"
         else
-            echo -e "\e[36m🚀 SDDM Astronaut Theme Installer\e[0m"
+            echo -e "\e[36m🚀 SDDM Arona Theme Installer\e[0m"
         fi
 
         local choice=$(choose \
