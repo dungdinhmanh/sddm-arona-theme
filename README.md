@@ -13,7 +13,7 @@ All themes were created for 1080p. However, they should work well in other resol
 ![arona static](Previews/arona_static.png)
 
 ## Preview of live themes
-
+https://github.com/user-attachments/assets/d8b0005b-43aa-4df5-b0b6-49223a5b973c
 
 ## Installation
 
